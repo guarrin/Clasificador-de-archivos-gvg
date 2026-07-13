@@ -1,0 +1,500 @@
+
+<style>
+.sec-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; display: block; }
+.field { margin-bottom: 14px; }
+.result-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-top: 14px; }
+.row { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.row:last-child { border-bottom: none; padding-bottom: 0; }
+.rlabel { font-size: 13px; color: var(--color-text-secondary); min-width: 130px; padding-top: 2px; flex-shrink: 0; }
+.rvalue { font-size: 14px; color: var(--color-text-primary); font-weight: 500; flex: 1; word-break: break-all; }
+.badge { display: inline-block; font-size: 12px; padding: 3px 10px; border-radius: var(--border-radius-md); font-weight: 500; }
+.ok { background: var(--color-background-success); color: var(--color-text-success); }
+.warn { background: var(--color-background-warning); color: var(--color-text-warning); }
+.copy-btn { font-size: 12px; cursor: pointer; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: 3px 8px; margin-left: 8px; color: var(--color-text-secondary); }
+.copy-btn:hover { color: var(--color-text-primary); }
+.hint { font-size: 12px; color: var(--color-text-secondary); margin-top: 4px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.version-badge { font-size: 11px; background: var(--color-background-info); color: var(--color-text-info); padding: 2px 8px; border-radius: var(--border-radius-md); font-weight: 500; }
+input, select { width: 100%; box-sizing: border-box; }
+</style>
+
+<div style="padding: 1rem 0;">
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+  <h1 style="font-size: 16px; font-weight: 700; color: #0a3566; margin: 0;">Clasificador de archivos GV Development Group</h1>
+  <span class="version-badge">Revisión 02 · Mayo 2026 · v4.0</span>
+</div>
+
+<div class="grid2">
+  <div class="field">
+    <span class="sec-label">Empresa</span>
+    <select id="empresa">
+      <option value="">— Selecciona empresa —</option>
+      <option value="Abacus-Consulting-Trading-LLC">Abacus Consulting & Trading LLC</option>
+      <option value="Abgasa-LLC">Abgasa LLC</option>
+      <option value="Adippsa-USA-LLC">Adippsa USA LLC - Enrique Ross</option>
+      <option value="Adrivar-Developers-GP">Adrivar Developers GP</option>
+      <option value="Adiaz-Logistic-LLC">Adiaz Logistic LLC</option>
+      <option value="AGLPC-LLC">AGLPC LLC</option>
+      <option value="Alberto-Mechanic-Shop-LLC">Alberto Mechanic Shop LLC</option>
+      <option value="Alfa-1-Investments-LP">Alfa 1 Investments LP</option>
+      <option value="Alfa-2-Investment-LP">Alfa 2 Investment LP</option>
+      <option value="ALBEXAR-LLC">ALBEXAR LLC</option>
+      <option value="ALMENT-Group-y-GLPC">ALMENT Group y GLPC</option>
+      <option value="Almanzor-LLC">Almanzor LLC</option>
+      <option value="Almacen-y-Cruce-de-Occidente-LLC">Almacen y Cruce de Occidente LLC</option>
+      <option value="Almen-Group-INC">Almen Group INC</option>
+      <option value="Alteno-Group-LLC">Alteno Group LLC</option>
+      <option value="ALS-TEXAS-6543-LLC">ALS TEXAS 6543 LLC</option>
+      <option value="American-Smart-Business">American Smart Business</option>
+      <option value="AOD-Investments-LLC">AOD Investments LLC</option>
+      <option value="Armadillo-Energy-Services-LLC">Armadillo Energy Services LLC</option>
+      <option value="ARTICLES-OPERATING-VALENZUELA-COMPANIES">ARTICLES & OPERATING VALENZUELA COMPANIES</option>
+      <option value="Athletic-Brands-LLC">Athletic Brands LLC</option>
+      <option value="Austin-Venture-Association">Austin Venture Association - David Valentino</option>
+      <option value="7343-AMERICA-LOTUS-LLC">7343 AMERICA LOTUS LLC</option>
+      <option value="411-Harvest-Point-TX">411 Harvest Point TX</option>
+      <option value="473-REDBIRD-RANCH-LLC">473 REDBIRD RANCH LLC</option>
+      <option value="1433-AMERICAN-LOTUS-LLC">1433 AMERICAN LOTUS LLC</option>
+      <option value="112-Grosenbacher-Ranch-LLC">112 Grosenbacher Ranch LLC</option>
+      <option value="12-KR-Texas-LLC">12 KR Texas LLC</option>
+      <option value="35-Solana-Ridge-LLC">35 Solana Ridge LLC</option>
+      <option value="3443-LOTUS-LLC">3443 LOTUS LLC</option>
+      <option value="2104-Realty-LLC">2104 Realty LLC - Manuel Alberto Salazar Heredia</option>
+      <option value="55-KRAMER-FARM-LLC">55 KRAMER FARM LLC</option>
+      <option value="507-Altic-Street-Land-LLC">507 Altic Street Land LLC</option>
+      <option value="BELLA-FUSION-AMERICA-LLC">BELLA FUSION AMERICA LLC</option>
+      <option value="Beni-and-Vince">Beni and Vince</option>
+      <option value="BEXAR-4243-LLC">BEXAR 4243 LLC</option>
+      <option value="Bilateral-Developments-LLC">Bilateral Developments LLC</option>
+      <option value="Bless-Petroleum-INC">Bless Petroleum INC</option>
+      <option value="BMG-Building-LLC">BMG Building LLC</option>
+      <option value="BOI-Empresas-Alonso-y-Cia">BOI Empresas Alonso y Cia</option>
+      <option value="BPG-Investments-LLC">BPG Investments LLC</option>
+      <option value="Brightest-Day-Plumbing-LLC">Brightest Day Plumbing LLC</option>
+      <option value="Buildwise-Solutions-LLC">Buildwise Solutions LLC</option>
+      <option value="C-P-Salas-LLC">C&P Salas LLC</option>
+      <option value="Calzado-Afler-LLC">Calzado Afler LLC</option>
+      <option value="Cambridge-3018-LLC">Cambridge 3018 LLC</option>
+      <option value="Cantera-Digital-LLC">Cantera Digital LLC</option>
+      <option value="CAP-Holdings-y-Frendly-Housing">CAP Holdings y Frendly Housing</option>
+      <option value="CAP-Hodings-International-INC">CAP Hodings International INC</option>
+      <option value="Cardumen-Developments-LLC">Cardumen Developments LLC</option>
+      <option value="Cardumen-Investment-LLC">Cardumen Investment LLC</option>
+      <option value="Carmel-Commercial-Cleaning-LLC">Carmel Commercial Cleaning LLC</option>
+      <option value="Carmel-Solutions-Group-LLC">Carmel Solutions Group LLC</option>
+      <option value="Castillo-Expeditions-LLC">Castillo Expeditions LLC</option>
+      <option value="Catrachos-Heavy-Duty-Towing">Catrachos Heavy Duty Towing</option>
+      <option value="CB-Wine-Tourism-Developments-LLC">CB Wine Tourism Developments LLC - Rodrigo Correa</option>
+      <option value="Celsius-USA-Developers-LLC">Celsius USA Developers LLC</option>
+      <option value="Cerro-Verde-Machinery-LLC">Cerro Verde Machinery LLC</option>
+      <option value="Chapter-Investments-HTX-II-LLC">Chapter Investments HTX II LLC</option>
+      <option value="Chicas-Remodeling-Construction">Chicas Remodeling & Construction</option>
+      <option value="Citrus-Capital">Citrus Capital - Emin Zacarias</option>
+      <option value="Citrus-Connect-USA-LLC">Citrus Connect USA LLC</option>
+      <option value="CODE-VIBE-LLC">CODE VIBE LLC</option>
+      <option value="Comex-Camara-Oficial-Mexicana-Empresarial">Comex - Camara Oficial Mexicana Empresarial</option>
+      <option value="Concremax-LLC">Concremax LLC</option>
+      <option value="CP-By-Desing-LLC">CP By Desing LLC</option>
+      <option value="CRPS-Clinical-Research-Professional">CRPS Clinical Research Professional - Marco Antonio Cid Lopez</option>
+      <option value="CRYOB-US-LLC">CRYOB US LLC - Einar Alvarez</option>
+      <option value="Danadriana-LLC">Danadriana LLC</option>
+      <option value="Daniel-Lopez-Empresas-Varias">Daniel Lopez_Empresas Varias</option>
+      <option value="Denver-Re-Group-LLC">Denver Re Group LLC</option>
+      <option value="Desuar-Bakery-LLC">Desuar Bakery LLC</option>
+      <option value="Diesca-LLC">Diesca LLC</option>
+      <option value="Digital-PX-Group-LLC">Digital PX Group LLC</option>
+      <option value="DINGO-SOFTWARE-LLC">DINGO SOFTWARE LLC</option>
+      <option value="DLZR-LLC">DLZR LLC - Juan Pablo Manzo</option>
+      <option value="Doggys-Land-Grooming-Beauty-LLC">Doggy's Land Grooming & Beauty LLC</option>
+      <option value="Dumois-Business-Owner-Consulting-INC">Dumois Business Owner Consulting INC</option>
+      <option value="Dux-Capital-Management-US-LLC">Dux Capital Management US LLC</option>
+      <option value="Easyy-Developments-LLC">Easyy Developments LLC</option>
+      <option value="Easyy-Group-LLC">Easyy Group LLC</option>
+      <option value="Eassy-Services-LLC">Eassy Services LLC</option>
+      <option value="Ebime-Healthcare-LLC">Ebime Healthcare LLC</option>
+      <option value="EH-Antico-LLC">EH Antico LLC</option>
+      <option value="Eguiher-Group-LLC">Eguiher Group LLC</option>
+      <option value="EKH-International-LLC">EKH International LLC - Erika Ocegueda</option>
+      <option value="Emberwood-Company-LLC">Emberwood Company LLC</option>
+      <option value="Energy-LO-Ruben-Lago">Energy LO Ruben Lago</option>
+      <option value="Epica-Instalaciones">Epica Instalaciones</option>
+      <option value="Erick-David-Beltran-Hernandez">Erick David Beltran Hernandez</option>
+      <option value="ERHL-INVESTMENTS-LLC">ERHL INVESTMENTS LLC</option>
+      <option value="Espinoporco-TA-LLC">Espinoporco TA LLC - Tatiana Preciado</option>
+      <option value="Familiux-Properties-LLC">Familiux Properties LLC Leonardo Zenteno</option>
+      <option value="Felix-Isaac-Flores-Izar">Felix Isaac Flores Izar</option>
+      <option value="Fernando-Huerta">Fernando Huerta</option>
+      <option value="Fernando-Vales">Fernando Vales</option>
+      <option value="FH-Capital-Group-LLC">FH Capital Group LLC</option>
+      <option value="FH-USA-Development-LLC">FH USA Development LLC</option>
+      <option value="FHT-Cove-37-LLC">FHT Cove 37 LLC</option>
+      <option value="FHT-Cove-39-LLC">FHT Cove 39 LLC</option>
+      <option value="Fix-My-Car-Corporation">Fix My Car Corporation - Eduardo Moreno</option>
+      <option value="Flexometal-Fensa">Flexometal _ Fensa</option>
+      <option value="Four-Siblings-LP">Four Siblings LP - Luis Arturo Lopez Garcia</option>
+      <option value="Fructumdei-Group-LLC">Fructumdei Group LLC - Estefania Ysita</option>
+      <option value="Friendly-Housing-In-TX-LLC">Friendly Housing In TX LLC</option>
+      <option value="Funny-Pets-LLC">Funny Pets LLC</option>
+      <option value="Galapago-Ventures-LLC">Galapago Ventures LLC</option>
+      <option value="GARZA-LISSETTE-PHOTOGRAPHY">GARZA LISSETTE PHOTOGRAPHY</option>
+      <option value="GDE-Group-LLC">GDE Group LLC</option>
+      <option value="GDX-Energy-LLC">GDX Energy LLC</option>
+      <option value="GG-Renovators-Group-LLC">GG Renovators Group LLC</option>
+      <option value="GLPC-Holding-INC">GLPC Holding INC</option>
+      <option value="GMAV-INVESTMENTS-LLC">GMAV INVESTMENTS LLC</option>
+      <option value="Golden-Key-Developers-LLC">Golden Key Developers LLC</option>
+      <option value="Gonzalez-Caso-LLC">Gonzalez & Caso LLC</option>
+      <option value="Good-Wave-Developers-Corp">Good Wave Developers Corp</option>
+      <option value="GPJ-Fuels-Oil-LLC">GPJ Fuels & Oil LLC</option>
+      <option value="Grader-LLC">Grader LLC</option>
+      <option value="Graffet-International-LLC">Graffet International LLC</option>
+      <option value="Gran-Fitrion-LLC">Gran Fitrion LLC</option>
+      <option value="Great-Living-Property-Management-LLC">Great Living Property Management LLC</option>
+      <option value="Green-Rock-LLC">Green Rock LLC</option>
+      <option value="Green-Rock-Texas-LLC">Green Rock Texas LLC</option>
+      <option value="Group-Texas-Mobiles-Homes-LLC">Group Texas Mobiles Homes LLC</option>
+      <option value="Grupo-Arco-Iris">Grupo Arco Iris</option>
+      <option value="Grupo-Interpec">Grupo Interpec - Maria Luisa's</option>
+      <option value="Grupo-Puerta-del-Lobo">Grupo Puerta del Lobo</option>
+      <option value="Grupo-Rodriguez-Russum">Grupo Rodriguez Russum</option>
+      <option value="Grupo-URBAN">Grupo URBAN - Cliente Arturo Ochoa</option>
+      <option value="GV-Development-Group-LLC">GV Development Group LLC</option>
+      <option value="GV-IBI-LLC">GV IBI LLC</option>
+      <option value="GV-International-Corp">GV International Corp</option>
+      <option value="GV-International-Group-Corp">GV International Group Corp</option>
+      <option value="GV-Solutions-LLC">GV Solutions LLC</option>
+      <option value="H4CK3R">H4CK3R - Ernesto Contreras</option>
+      <option value="Hector-Flores">Hector Flores</option>
+      <option value="Hideaway-Green-LLC">Hideaway Green LLC</option>
+      <option value="Hot-Dogs-and-More-LLC">Hot Dogs and More LLC</option>
+      <option value="Hsu-Management-Company,-LLC">Hsu Management Company, LLC</option>
+      <option value="HSU-INVESTMENTS,-LLC">HSU INVESTMENTS, LLC</option>
+      <option value="IBS-Group-Global-Services">IBS Group Global Services</option>
+      <option value="IDS-USA-LLC">IDS USA LLC</option>
+      <option value="Ilco-Solutions-LLC">Ilco Solutions LLC</option>
+      <option value="Ingusa-Group-Corp">Ingusa Group Corp</option>
+      <option value="International-Holding-Forwarders-LLC">International Holding Forwarders LLC</option>
+      <option value="Iteam-Staffing-US-INC">Iteam Staffing US INC - MIDAS</option>
+      <option value="ITIN-Valenzuela">ITIN's Valenzuela</option>
+      <option value="Ixtul-Quarter-Horses,-LLC">Ixtul Quarter Horses, LLC</option>
+      <option value="JAP-Builders-LLC">JAP Builders LLC</option>
+      <option value="Javier-Vargas">Javier Vargas</option>
+      <option value="JFG-Remodeling-LLC">JFG Remodeling LLC</option>
+      <option value="JJRODMOR,-LLC">JJRODMOR, LLC</option>
+      <option value="Juan-Meouchi">Juan Meouchi</option>
+      <option value="Juan-Pablo-Paz">Juan Pablo Paz</option>
+      <option value="KDP-Desarrolladora-SA-de-CV">KDP Desarrolladora SA de CV</option>
+      <option value="Khumo-Developments-LLC">Khumo Developments LLC</option>
+      <option value="Kodiz-TX-LLC">Kodiz TX LLC</option>
+      <option value="KR-Texas-111-LLC">KR Texas 111 LLC</option>
+      <option value="La-Vaquera-Meat-Market-LLC">La Vaquera Meat Market LLC - Juan Carlos Ibarra</option>
+      <option value="LAOC-America-INC">LAOC America INC Ruben Lago</option>
+      <option value="LATAM-Doers-LLC">LATAM Doers LLC</option>
+      <option value="LB-PHOTOGRAPHY-LLC">LB PHOTOGRAPHY LLC</option>
+      <option value="Legal-AI-Tools-INC">Legal AI Tools INC - Roberto Ibarra</option>
+      <option value="LG-Photography-LLC">LG Photography LLC</option>
+      <option value="Life-Experts-Homes-LLC">Life Experts Homes LLC</option>
+      <option value="Lion-Face-Corp">Lion Face Corp - Carlos Valenzuela</option>
+      <option value="Live-Oak-Renovations-LLC">Live Oak Renovations LLC</option>
+      <option value="Logislub-LLC">Logislub LLC</option>
+      <option value="Lookover-LLC">Lookover LLC</option>
+      <option value="Luis-Mata">Luis Mata</option>
+      <option value="Luz-C-Fruit-Produce,-LLC">Luz C' Fruit Produce, LLC</option>
+      <option value="Lyra-Investments-INC">Lyra Investments INC - Manuel Nuñez Garcia</option>
+      <option value="Laguna-Heal-Homes-LLC">Laguna Heal Homes LLC</option>
+      <option value="M-M-Cleaning-Team-LLC">M&M Cleaning Team LLC</option>
+      <option value="Magar-Kitchens-of-America-LLC">Magar Kitchens of America LLC</option>
+      <option value="Manuel-Salazar">Manuel Salazar</option>
+      <option value="Mario-Ramos">Mario Ramos</option>
+      <option value="Marshall-Islands-Tostado">Marshall Islands Tostado</option>
+      <option value="Marvel-Developers,-LLC">Marvel Developers, LLC</option>
+      <option value="Mesuna-LLC">Mesuna LLC</option>
+      <option value="Metrica-Ventures-LLC">Metrica Ventures LLC</option>
+      <option value="Monticello-Ranch-LLC">Monticello Ranch LLC</option>
+      <option value="Mosquella-Group-LLC">Mosquella Group LLC</option>
+      <option value="Mountain-Horse-Trading-Co">Mountain Horse Trading Co</option>
+      <option value="Muna-Trade-LLC-y-Sukha-LP">Muna Trade LLC y Sukha LP - Javier Soriano</option>
+      <option value="Muestra">Muestra</option>
+      <option value="MV-Easyy-Services-LLC">MV Easyy Services LLC</option>
+      <option value="New-Age-Transportation">New Age Transportation</option>
+      <option value="New-Horizon-Commerce-LLC">New Horizon Commerce LLC</option>
+      <option value="Nolasco-Remodeling-and-Construction-LLC">Nolasco Remodeling and Construction LLC</option>
+      <option value="Norlund-Way-LLC">Norlund Way LLC</option>
+      <option value="Nova-Home-Design-Construction-LLC">Nova Home Design & Construction LLC</option>
+      <option value="Novum-Prosper-Realty-LLC">Novum & Prosper Realty LLC</option>
+      <option value="NuBatt">NuBatt</option>
+      <option value="PAN-AMERICAN-SENIOR-MANAGEMENT-ALUMNI-ASSOCIATION">PAN AMERICAN SENIOR MANAGEMENT ALUMNI ASSOCIATION</option>
+      <option value="Pandora-X">Pandora X</option>
+      <option value="Passion-Brick-LLC">Passion Brick LLC</option>
+      <option value="PASMAA-BL">PASMAA BL (c6)</option>
+      <option value="PASMAA-NON-PROFIT-CORP">PASMAA NON PROFIT CORP</option>
+      <option value="Pentay-Properties-LLC">Pentay Properties LLC</option>
+      <option value="PLS-Automotive-Services-LLC">PLS Automotive Services LLC</option>
+      <option value="Primar-LLC">Primar LLC</option>
+      <option value="Prisma-International,-LLC">Prisma International, LLC</option>
+      <option value="Productora-Agricola-de-los-Altos-LLC">Productora Agricola de los Altos LLC</option>
+      <option value="Progeny-Realty-Solutions-LLC">Progeny Realty Solutions LLC</option>
+      <option value="Promotora-de-Inversiones-Alfa-1-LLC">Promotora de Inversiones Alfa 1 LLC</option>
+      <option value="Promotora-de-Inversiones-Alfa-2-LLC">Promotora de Inversiones Alfa 2 LLC</option>
+      <option value="PS-Heavy-Machinery,-LLC">PS Heavy Machinery, LLC</option>
+      <option value="PUERTA-DEL-LOBO-WINES-LLC">PUERTA DEL LOBO WINES LLC</option>
+      <option value="PX-ACADEMY-LLC">PX ACADEMY LLC</option>
+      <option value="Querencia-Capital">Querencia Capital</option>
+      <option value="R-Construction-Remodeling-LLC">R Construction & Remodeling LLC</option>
+      <option value="Racing-Cargo">Racing Cargo</option>
+      <option value="Ranch-Subd-LLC">Ranch Subd LLC</option>
+      <option value="RB-Tires-Services-and-More-INC">RB Tires, Services and More INC</option>
+      <option value="Real-Bailmex-Holding">Real Bailmex Holding</option>
+      <option value="Real-Bailmex-Texas-LLC">Real Bailmex Texas LLC</option>
+      <option value="Rebsa-Investment-LLC">Rebsa Investment LLC</option>
+      <option value="Rebsa-y-Marvel">Rebsa y Marvel</option>
+      <option value="Red-Solutions-Communications-LLC">Red Solutions Communications LLC</option>
+      <option value="Rentara-LLC">Rentara LLC - Ana Habib</option>
+      <option value="Rethink-Refresh-LLC">Rethink & Refresh LLC - Luis Arturo Lopez Garcia</option>
+      <option value="RHINE-311-LLC">RHINE 311 LLC</option>
+      <option value="RISARAINE-CAPITAL-LLC">RISARAINE CAPITAL LLC</option>
+      <option value="Roal-Palo-LLC">Roal-Palo LLC</option>
+      <option value="Rome-9184-LLC">Rome 9184 LLC</option>
+      <option value="Romoros-Construction-LLC">Romoros Construction LLC</option>
+      <option value="Royal-Energy-Supply-Corp">Royal Energy Supply Corp Ruben Lago</option>
+      <option value="Saffron-Way-TX-LLC">Saffron Way TX LLC</option>
+      <option value="Sanchez-y-Martin-USA">Sanchez y Martin USA</option>
+      <option value="SARKIS-HUMBERTO">SARKIS HUMBERTO</option>
+      <option value="Saxum-Investments-LP">Saxum Investments LP</option>
+      <option value="Saxum-Media-Group-LLC">Saxum Media Group LLC</option>
+      <option value="Sirius-Tech-Software-LLC">Sirius Tech Software LLC - Ana Laura Vizcarra</option>
+      <option value="Sky-Modern-Bounce-LLC">Sky Modern Bounce LLC</option>
+      <option value="Smart-Roofing-LLC">Smart Roofing LLC</option>
+      <option value="Sofia-Solorzano">Sofia Solorzano</option>
+      <option value="Solid-Buiders">Solid Buiders</option>
+      <option value="Southwest-Initial-Investments-LLC">Southwest Initial Investments LLC - Alex Hsu</option>
+      <option value="Spas-Georgiev">Spas Georgiev</option>
+      <option value="Splash-of-Ballons-LLC">Splash of Ballons LLC</option>
+      <option value="Sudown-Pass-LLC">Sudown Pass LLC</option>
+      <option value="Super-Wow-USA-Corporation">Super Wow USA Corporation David Saenz</option>
+      <option value="Tecnofarma-LLC">Tecnofarma LLC</option>
+      <option value="The-Big-Fisher-SAS">The Big Fisher SAS - Zulma Rodríguez</option>
+      <option value="TOSTADO-INVESTMENT-GROUP">TOSTADO INVESTMENT GROUP</option>
+      <option value="TOSTADO-INVESTMENT-HOLDING-LLC">TOSTADO INVESTMENT HOLDING LLC</option>
+      <option value="Tomahawk-Foods-USA-LLC">Tomahawk Foods USA LLC</option>
+      <option value="USABiz-Consulting-Group-LLC">USABiz Consulting Group LLC - Alianza Comercial</option>
+      <option value="US-Visa-LATAM">US Visa LATAM - MIguel Barrios</option>
+      <option value="USA-VG-Group-LLC">USA VG Group LLC</option>
+      <option value="VAFI-Solutions-LLC">VAFI Solutions LLC</option>
+      <option value="Valga-Family-INC">Valga Family INC Fernando Vales</option>
+      <option value="Vapare-Investments-LLC">Vapare Investments LLC</option>
+      <option value="Verse-Construction-LLC">Verse Construction LLC</option>
+      <option value="VG-USA-Development-LLC">VG USA Development LLC</option>
+      <option value="VG-USA-LLC">VG USA LLC</option>
+      <option value="Villages-TX-Bulverde-LLC">Villages TX Bulverde LLC</option>
+      <option value="Vino-Cumulo-LLC">Vino Cumulo LLC</option>
+      <option value="VM-AI-EDGE-US-CORPORATION">VM AI-EDGE US CORPORATION</option>
+      <option value="VP-Produce-Inc">VP Produce Inc - Cristian Valencia</option>
+      <option value="VVG-Capital">VVG Capital - Gustavo Villa Velazquez Aldana</option>
+      <option value="VYT-LLC">VYT LLC - Ronald Tobias</option>
+      <option value="We-Care-Products">We Care Products</option>
+      <option value="Well-Cambridge-TX-LLC">Well Cambridge TX LLC</option>
+      <option value="White-Diamond-International-LLC">White Diamond International LLC</option>
+      <option value="Woodcourt-LLC">Woodcourt LLC</option>
+      <option value="ZapDaddy-Electric-LLC">ZapDaddy Electric LLC - David Serna</option>
+      <option value="Zhadere-LLC">Zhadere LLC</option>
+    </select>
+    <p class="hint">Lista de empresas GV Group</p>
+  </div>
+  <div class="field">
+    <span class="sec-label">Tipo de documento</span>
+    <select id="tipo">
+      <option value="">— Selecciona —</option>
+      <optgroup label="1 · Documentos de creación de la empresa">
+        <option value="Certificate-of-Filing|1 Documentos de creación de la empresa|doc|1.1">Certificate of Filing</option>
+        <option value="Certificate-of-Formation|1 Documentos de creación de la empresa|doc|1.2">Certificate of Formation</option>
+        <option value="Certificate-of-Amendment|1 Documentos de creación de la empresa|doc|1.3">Certificate of Amendment</option>
+        <option value="Form-SS-4|1 Documentos de creación de la empresa|doc|1.4">Form SS-4</option>
+        <option value="EIN|1 Documentos de creación de la empresa|doc|1.5">EIN</option>
+        <option value="EIN-Assistant|1 Documentos de creación de la empresa|doc|1.6">EIN Assistant</option>
+        <option value="Texas-Comptroller|1 Documentos de creación de la empresa|doc|1.7">Texas Comptroller</option>
+        <option value="Operating-Agreement|1 Documentos de creación de la empresa|doc|1.8">Operating Agreement</option>
+        <option value="Articles-of-Incorporation|1 Documentos de creación de la empresa|doc|1.9">Articles of Incorporation</option>
+        <option value="Cuestionario-para-creacion-de-empresa|1 Documentos de creación de la empresa|doc|1.10">Cuestionario para creación de empresa</option>
+        <option value="Formato-enmienda|1 Documentos de creación de la empresa|doc|1.11">Formato enmienda</option>
+        <option value="Form-W-9|1 Documentos de creación de la empresa|doc|1.12">Form W-9</option>
+        <option value="Office-of-the-Secretary-of-State|1 Documentos de creación de la empresa|doc|1.13">Office of the Secretary of State</option>
+        <option value="Company-Agreement|1 Documentos de creación de la empresa|doc|1.14">Company Agreement</option>
+      </optgroup>
+      <optgroup label="2 · Documentos de identificación de socios y gerentes">
+        <option value="BOI-Report|2 Documentos de identificación de socios y gerentes|doc|2.1">BOI Report</option>
+        <option value="SSN|2 Documentos de identificación de socios y gerentes|id|2.2">SSN</option>
+        <option value="ITIN|2 Documentos de identificación de socios y gerentes|id|2.3">ITIN</option>
+        <option value="Form-W9|2 Documentos de identificación de socios y gerentes|doc|2.4">Form W9</option>
+        <option value="Driver-License|2 Documentos de identificación de socios y gerentes|id|2.5">Driver License / Licencia de conducir</option>
+        <option value="Pasaporte|2 Documentos de identificación de socios y gerentes|id|2.6">Pasaporte / Passport</option>
+        <option value="Visa|2 Documentos de identificación de socios y gerentes|id|2.7">Visa</option>
+        <option value="INE-IFE|2 Documentos de identificación de socios y gerentes|id|2.8">INE / IFE</option>
+      </optgroup>
+      <optgroup label="3 · Bancos">
+        <option value="Bank-Statement|3 Bancos|bank|3.1">Bank Statement</option>
+        <option value="Credit-Card-Statement|3 Bancos|bank|3.2">Credit Card Statement</option>
+      </optgroup>
+      <optgroup label="4 · Información Financiera">
+        <option value="Balance-Sheet|4 Información Financiera|doc|4.1">Balance Sheet</option>
+        <option value="P-and-L|4 Información Financiera|doc|4.2">P and L (Profit & Loss)</option>
+        <option value="Asset-List|4 Información Financiera|doc|4.3">Asset List</option>
+        <option value="Sales-Report|4 Información Financiera|doc|4.4">Sales Report</option>
+        <option value="Sales-Summary|4 Información Financiera|doc|4.5">Sales Summary</option>
+        <option value="EEFF|4 Información Financiera|doc|4.6">EEFF</option>
+      </optgroup>
+      <optgroup label="5 · Impuestos">
+        <option value="Tax-Return-Borrador|5 Impuestos|doc|5.1">Tax Return Borrador</option>
+        <option value="Tax-Return-Autorización|5 Impuestos|doc|5.2">Tax Return Autorización</option>
+        <option value="Tax-Return-Envío|5 Impuestos|doc|5.3">Tax Return Envío</option>
+        <option value="Tax-Return-Confirmation|5 Impuestos|doc|5.4">Tax Return Confirmation</option>
+        <option value="Form-8879|5 Impuestos|doc|5.5">Form 8879</option>
+        <option value="EFTPS|5 Impuestos|doc|5.6">EFTPS</option>
+      </optgroup>
+      <optgroup label="6 · Payroll">
+        <option value="Payroll-List|6 Payroll|doc|6.1">Payroll List</option>
+        <option value="Payroll-Summary|6 Payroll|doc|6.2">Payroll Summary</option>
+        <option value="940-FUTA-Deposit-Notice|6 Payroll|doc|6.3">940 FUTA Deposit Notice</option>
+        <option value="Form-941|6 Payroll|doc|6.4">Form 941</option>
+      </optgroup>
+      <optgroup label="7 · Franchise Tax">
+        <option value="Franchise-Tax|7 Franchise Tax|doc|7.1">Franchise Tax</option>
+        <option value="Franchise-Tax-Account-Status|7 Franchise Tax|doc|7.2">Franchise Tax Account Status</option>
+      </optgroup>
+      <optgroup label="8 · Contratos">
+        <option value="Bookkeeping-Services-Agreement|8 Contratos|doc|8.1">Bookkeeping Services Agreement</option>
+        <option value="Registered-Agent-And-Management-Fee-Services-Agreement|8 Contratos|doc|8.2">Registered Agent And Management Fee Services Agreement</option>
+        <option value="Treasury-Management-Services-Agreement|8 Contratos|doc|8.3">Treasury Management Services Agreement</option>
+        <option value="Contrato|8 Contratos|doc|8.4">Contrato (otro)</option>
+      </optgroup>
+      <optgroup label="9 · Propuestas">
+        <option value="Propuesta|9 Propuestas|doc|9.1">Propuesta</option>
+      </optgroup>
+      <optgroup label="10 · Trazabilidad">
+        <option value="Formato-de-entrega-de-documentos|10 Trazabilidad|doc|10.1">Formato de entrega de documentos</option>
+        <option value="Documentos-recibidos-del-cliente|10 Trazabilidad|doc|10.2">Documentos recibidos del cliente</option>
+      </optgroup>
+    </select>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="field">
+    <span class="sec-label">Fecha del documento</span>
+    <input type="text" id="fecha" placeholder="Ej: 2026-05-07" />
+    <p class="hint">YYYY-MM-DD · Sin fecha exacta: YYYY-XX-XX</p>
+  </div>
+  <div class="field">
+    <span class="sec-label">Versión</span>
+    <input type="text" id="version" placeholder="v1" value="v1" />
+    <p class="hint">Secuencial obligatorio: v1, v2, v3…</p>
+  </div>
+</div>
+
+<div class="field">
+  <span class="sec-label">Descripción adicional <span style="font-weight:400;text-transform:none;">(opcional)</span></span>
+  <input type="text" id="descripcion" placeholder="Ej: nombre de socio, periodo fiscal, banco" />
+  <p class="hint">Usa guiones medios para separar palabras. Ej: Felipe_Pérez-López</p>
+</div>
+
+<button onclick="clasificar()" style="width:100%; padding:10px; font-size:14px; font-weight:500; background:#0a3566; color:#fff; border:none; border-radius:var(--border-radius-md); cursor:pointer;">
+  Clasificar archivo ↗
+</button>
+
+<div id="resultado" style="display:none;"></div>
+
+</div>
+
+<script>
+function clasificar() {
+  const empresaEl = document.getElementById('empresa');
+  const empresaVal = empresaEl.value;
+  const tipoRaw = document.getElementById('tipo').value;
+  const fecha = document.getElementById('fecha').value.trim();
+  const version = document.getElementById('version').value.trim() || 'v1';
+  const descripcion = document.getElementById('descripcion').value.trim();
+  const res = document.getElementById('resultado');
+
+  if (!tipoRaw) {
+    res.style.display = 'block';
+    res.innerHTML = '<div class="result-card"><p style="color:var(--color-text-danger);font-size:14px;">Selecciona el tipo de documento para continuar.</p></div>';
+    return;
+  }
+
+  const parts = tipoRaw.split('|');
+  const tipoDoc = parts[0];
+  const carpeta = parts[1];
+  const tipoFecha = parts[2];
+  const indice = parts[3];
+  const fechaUsada = fecha || 'YYYY-MM-DD';
+  const empresaNombre = empresaVal || 'NOMBRE-EMPRESA';
+
+  let fechaHint = '';
+  if (tipoFecha === 'id') {
+    fechaHint = 'Usar la fecha de emisión del documento de identidad (no la de recepción).';
+  } else if (tipoFecha === 'bank') {
+    fechaHint = 'Usar la fecha de cierre del estado de cuenta — último día del mes que cubre.';
+  } else {
+    fechaHint = 'Usar la fecha exacta del documento. Sin fecha exacta: YYYY-XX-XX.';
+  }
+
+  let partes = [indice, tipoDoc];
+  if (descripcion) partes.push(descripcion.replace(/\s+/g, '-'));
+  partes.push(fechaUsada);
+  partes.push(empresaNombre);
+  partes.push(version);
+  const nombreFinal = partes.join('_');
+  const nombreSafe = nombreFinal.replace(/'/g, "\\'");
+
+  const carpetaBloque = `
+    <div class="row">
+      <span class="rlabel">Carpeta</span>
+      <span class="rvalue"><span class="badge ok">✓ Definida</span> &nbsp;/${carpeta}</span>
+    </div>
+    <div class="row">
+      <span class="rlabel">Índice</span>
+      <span class="rvalue">${indice}</span>
+    </div>`;
+
+  let alertas = [];
+  if (!empresaVal) alertas.push('Selecciona la empresa de la lista.');
+  if (!fecha) alertas.push('No ingresaste fecha. ' + fechaHint);
+
+  let alertasHTML = alertas.length ? `
+    <div style="margin-top:10px;padding:10px 12px;background:var(--color-background-warning);border-radius:var(--border-radius-md);">
+      <div style="font-size:12px;font-weight:500;color:var(--color-text-warning);margin-bottom:4px;">Completa antes de guardar</div>
+      ${alertas.map(a => `<div style="font-size:12px;color:var(--color-text-warning);margin-top:3px;">• ${a}</div>`).join('')}
+    </div>` : '';
+
+  res.style.display = 'block';
+  res.innerHTML = `
+    <div class="result-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-size:13px;font-weight:500;color:var(--color-text-secondary);">Resultado</span>
+        <span class="badge ok">Listo para archivar</span>
+      </div>
+      <div class="row">
+        <span class="rlabel">Nombre final</span>
+        <span class="rvalue">${nombreFinal}<button class="copy-btn" onclick="copiar('${nombreSafe}',this)">copiar</button></span>
+      </div>
+      ${carpetaBloque}
+      <div class="row">
+        <span class="rlabel">Criterio fecha</span>
+        <span class="rvalue" style="font-weight:400;font-size:13px;color:var(--color-text-secondary);">${fechaHint}</span>
+      </div>
+    </div>
+    ${alertasHTML}`;
+}
+
+function copiar(texto, btn) {
+  navigator.clipboard.writeText(texto).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓ copiado';
+    setTimeout(() => btn.textContent = orig, 1500);
+  }).catch(() => {
+    btn.textContent = 'error';
+    setTimeout(() => btn.textContent = 'copiar', 1500);
+  });
+}
+</script>
